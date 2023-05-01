@@ -26,8 +26,8 @@ resource "aws_eks_fargate_profile" "kube-system" {
   # These subnets must have the following resource tag: 
   # kubernetes.io/cluster/<CLUSTER_NAME>.
   subnet_ids = [
-    aws_subnet.private-us-east-1a.id,
-    aws_subnet.private-us-east-1b.id
+    aws_subnet.private-ap-southeast-2a.id,
+    aws_subnet.private-ap-southeast-2b.id
   ]
 
   selector {
@@ -35,9 +35,9 @@ resource "aws_eks_fargate_profile" "kube-system" {
   }
 }
 
-data "aws_eks_cluster_auth" "eks" {
-  name = aws_eks_cluster.cluster.id
-}
+# data "aws_eks_cluster_auth" "eks" {
+#   name = aws_eks_cluster.cluster.id
+# }
 
 # resource "null_resource" "k8s_patcher" {
 #   depends_on = [aws_eks_fargate_profile.kube-system]
