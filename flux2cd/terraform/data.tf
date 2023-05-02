@@ -15,7 +15,7 @@ data "kubectl_file_documents" "apply" {
 
 data "flux_sync" "main" {
   target_path = "clusters/demo"
-  url         = "https://github.com/prprasad2020/fluxcd-medium"
+  url         = "https://github.com/chamambom/aws-fargate-terraform/tree/master/flux2cd"
   branch      = "main"
 }
 

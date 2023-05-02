@@ -15,10 +15,10 @@ terraform {
   }
 }
 
-provider "kubernetes" {
-  config_path    = "~/.kube/config"
-  config_context = "demo"
-}
+# provider "kubernetes" {
+#   config_path    = "~/.kube/config"
+#   config_context = "demo"
+# }
 
 provider "kubectl" {
   config_path    = "~/.kube/config"
